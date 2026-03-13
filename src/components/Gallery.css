@@ -1,0 +1,42 @@
+.gallery {
+  background: var(--black);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery__track {
+  display: flex;
+  gap: 3px;
+  min-width: max-content;
+}
+
+.gallery__img {
+  display: block;
+  height: clamp(140px, 22vw, 240px);
+  width: auto;
+  min-width: 180px;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.2);
+  transition: filter 0.4s ease;
+  flex-shrink: 0;
+}
+
+.gallery__img:hover {
+  filter: grayscale(0) contrast(1);
+}
+
+@media (min-width: 1200px) {
+  .gallery__track {
+    min-width: 100%;
+  }
+
+  .gallery__img {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}

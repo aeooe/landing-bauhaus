@@ -1,4 +1,5 @@
 import Hero from './components/Hero'
+import Gallery from './components/Gallery'
 import Intro from './components/Intro'
 import Principles from './components/Principles'
 import Buildings from './components/Buildings'
@@ -10,6 +11,7 @@ export default function App() {
   return (
     <div className="app">
       <Hero />
+      <Gallery />
       <Intro />
       <Principles />
       <Buildings />

@@ -1,13 +1,19 @@
 import useReveal from '../hooks/useReveal'
 import './Legacy.css'
 
+const BG_SRC =
+  'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=1600&q=80'
+
 export default function Legacy() {
   const [ref, visible] = useReveal()
 
   return (
-    <section className={`legacy ${visible ? 'legacy--visible' : ''}`} ref={ref}>
-      <div className="legacy__bar" aria-hidden="true" />
-
+    <section
+      className={`legacy ${visible ? 'legacy--visible' : ''}`}
+      ref={ref}
+      style={{ backgroundImage: `url(${BG_SRC})` }}
+    >
+      <div className="legacy__overlay" />
       <div className="legacy__content">
         <h2 className="legacy__heading">Legacy</h2>
         <p className="legacy__text">
@@ -18,11 +24,6 @@ export default function Legacy() {
           open-plan office, every sans-serif typeface on your screen traces
           a line back to Dessau.
         </p>
-      </div>
-
-      <div className="legacy__shapes" aria-hidden="true">
-        <div className="legacy__circle" />
-        <div className="legacy__rect" />
       </div>
     </section>
   )

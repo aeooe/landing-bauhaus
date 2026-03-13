@@ -1,12 +1,10 @@
 :root {
   --black: #0a0a0a;
-  --white: #f5f2eb;
-  --red: #e63946;
-  --blue: #1d3557;
-  --yellow: #f4a261;
-  --gray: #888;
+  --bg: #c6f0c6;
+  --bg-light: #d8f5d8;
+  --muted: #2a2a2a;
 
-  --font-display: 'Bebas Neue', sans-serif;
+  --font-display: 'Anton', sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
 }
 
@@ -24,7 +22,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--white);
+  background-color: var(--bg);
   color: var(--black);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,6 +30,6 @@ body {
 }
 
 ::selection {
-  background: var(--red);
-  color: var(--white);
+  background: var(--black);
+  color: var(--bg);
 }

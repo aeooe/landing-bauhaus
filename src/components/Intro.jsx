@@ -1,18 +1,15 @@
 import useReveal from '../hooks/useReveal'
 import './Intro.css'
 
+const IMG_SRC =
+  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+
 export default function Intro() {
   const [ref, visible] = useReveal()
 
   return (
     <section className={`intro ${visible ? 'intro--visible' : ''}`} ref={ref}>
-      <div className="intro__divider">
-        <span className="intro__divider-line" />
-        <span className="intro__divider-dot" />
-        <span className="intro__divider-line" />
-      </div>
-
-      <div className="intro__body">
+      <div className="intro__text-col">
         <h2 className="intro__heading">Form follows function</h2>
         <p className="intro__text">
           Born at the Weimar school in 1919, the Bauhaus movement dissolved the
@@ -23,12 +20,13 @@ export default function Intro() {
         </p>
       </div>
 
-      <div className="intro__accent" aria-hidden="true">
-        <div className="intro__grid">
-          {Array.from({ length: 9 }).map((_, i) => (
-            <div key={i} className="intro__grid-cell" />
-          ))}
-        </div>
+      <div className="intro__img-col">
+        <img
+          className="intro__img"
+          src={IMG_SRC}
+          alt="Bauhaus Dessau facade"
+          loading="lazy"
+        />
       </div>
     </section>
   )

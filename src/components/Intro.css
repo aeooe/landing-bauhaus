@@ -1,9 +1,9 @@
 .intro {
-  padding: clamp(3rem, 8vh, 5rem) clamp(2rem, 8vw, 10rem);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  padding: clamp(3rem, 6vh, 5rem) clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -14,77 +14,56 @@
   transform: translateY(0);
 }
 
-.intro__divider {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 120px;
-}
-
-.intro__divider-line {
-  flex: 1;
-  height: 1px;
-  background: var(--black);
-  opacity: 0.2;
-}
-
-.intro__divider-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--red);
-  border-radius: 50%;
-}
-
-.intro__body {
-  max-width: 620px;
-  text-align: left;
+.intro__text-col {
+  min-width: 0;
 }
 
 .intro__heading {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  letter-spacing: 0.04em;
+  font-size: clamp(2.5rem, 8vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
-  margin-bottom: 1rem;
   color: var(--black);
+  margin-bottom: clamp(1rem, 2vw, 2rem);
 }
 
 .intro__text {
-  font-weight: 300;
-  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
-  line-height: 1.6;
-  color: var(--gray);
-  letter-spacing: 0.01em;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 520px;
 }
 
-.intro__accent {
-  margin-top: 0.5rem;
+.intro__img-col {
+  min-width: 0;
 }
 
-.intro__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
-  width: clamp(50px, 8vw, 72px);
+.intro__img {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 45vw, 560px);
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.1);
+  transition: filter 0.5s ease;
 }
 
-.intro__grid-cell {
-  aspect-ratio: 1;
-  background: var(--black);
-  opacity: 0.06;
+.intro__img:hover {
+  filter: grayscale(0.3) contrast(1);
 }
 
-.intro__grid-cell:nth-child(5) {
-  background: var(--blue);
-  opacity: 0.7;
-}
+@media (max-width: 768px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
 
-.intro__grid-cell:nth-child(3) {
-  background: var(--yellow);
-  opacity: 0.6;
-}
+  .intro__img-col {
+    order: -1;
+  }
 
-.intro__grid-cell:nth-child(7) {
-  background: var(--red);
-  opacity: 0.5;
+  .intro__img {
+    height: 260px;
+  }
 }

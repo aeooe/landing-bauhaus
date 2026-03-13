@@ -1,22 +1,13 @@
 .footer {
-  padding: 2.5rem clamp(2rem, 8vw, 10rem);
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.footer__line {
-  width: 32px;
-  height: 2px;
-  background: var(--black);
-  opacity: 0.15;
+  padding: clamp(2rem, 4vh, 3rem) clamp(1.5rem, 3vw, 3rem);
+  border-top: 2px solid var(--black);
 }
 
 .footer__text {
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 500;
   font-size: 0.75rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gray);
+  color: var(--muted);
 }
