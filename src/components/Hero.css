@@ -1,0 +1,150 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: clamp(2rem, 6vw, 6rem);
+  padding-bottom: clamp(4rem, 10vh, 8rem);
+}
+
+.hero__shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+}
+
+.shape--circle {
+  width: clamp(180px, 22vw, 320px);
+  height: clamp(180px, 22vw, 320px);
+  border-radius: 50%;
+  border: 3px solid var(--red);
+  top: 12%;
+  right: 10%;
+  animation: fadeSlideIn 1.2s ease-out 0.2s both;
+}
+
+.shape--rect-red {
+  width: clamp(60px, 8vw, 120px);
+  height: clamp(200px, 30vh, 400px);
+  background-color: var(--red);
+  top: 5%;
+  right: 4%;
+  animation: fadeSlideIn 1.2s ease-out 0.4s both;
+}
+
+.shape--rect-blue {
+  width: clamp(120px, 18vw, 260px);
+  height: clamp(80px, 10vw, 140px);
+  background-color: var(--blue);
+  top: 6%;
+  left: 4%;
+  animation: fadeSlideIn 1.2s ease-out 0.6s both;
+}
+
+.shape--line {
+  width: 2px;
+  height: clamp(150px, 25vh, 350px);
+  background-color: var(--black);
+  right: 20%;
+  bottom: 10%;
+  animation: fadeSlideIn 1.2s ease-out 0.8s both;
+}
+
+.shape--square-yellow {
+  width: clamp(100px, 12vw, 180px);
+  height: clamp(100px, 12vw, 180px);
+  background-color: var(--yellow);
+  bottom: 15%;
+  right: 14%;
+  animation: fadeSlideIn 1.2s ease-out 1s both;
+}
+
+.shape--dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--black);
+  top: 30%;
+  left: 42%;
+  animation: fadeSlideIn 1.2s ease-out 1.2s both;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  max-width: 720px;
+  animation: fadeSlideIn 1s ease-out both;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 15vw, 14rem);
+  line-height: 0.85;
+  letter-spacing: 0.04em;
+  color: var(--black);
+  margin-bottom: 1.25rem;
+}
+
+.hero__tagline {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(0.9rem, 1.6vw, 1.15rem);
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-bottom: 3rem;
+  }
+
+  .shape--circle {
+    top: 6%;
+    right: -5%;
+    width: 140px;
+    height: 140px;
+  }
+
+  .shape--rect-red {
+    width: 40px;
+    height: 160px;
+    top: 4%;
+    right: 4%;
+  }
+
+  .shape--rect-blue {
+    width: 100px;
+    height: 60px;
+  }
+
+  .shape--square-yellow {
+    width: 80px;
+    height: 80px;
+    right: 6%;
+    bottom: 8%;
+  }
+
+  .shape--line {
+    height: 120px;
+    right: 18%;
+  }
+}

@@ -1,0 +1,90 @@
+.intro {
+  padding: clamp(3rem, 8vh, 5rem) clamp(2rem, 8vw, 10rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.intro--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro__divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 120px;
+}
+
+.intro__divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--black);
+  opacity: 0.2;
+}
+
+.intro__divider-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+}
+
+.intro__body {
+  max-width: 620px;
+  text-align: left;
+}
+
+.intro__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.intro__text {
+  font-weight: 300;
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  line-height: 1.6;
+  color: var(--gray);
+  letter-spacing: 0.01em;
+}
+
+.intro__accent {
+  margin-top: 0.5rem;
+}
+
+.intro__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  width: clamp(50px, 8vw, 72px);
+}
+
+.intro__grid-cell {
+  aspect-ratio: 1;
+  background: var(--black);
+  opacity: 0.06;
+}
+
+.intro__grid-cell:nth-child(5) {
+  background: var(--blue);
+  opacity: 0.7;
+}
+
+.intro__grid-cell:nth-child(3) {
+  background: var(--yellow);
+  opacity: 0.6;
+}
+
+.intro__grid-cell:nth-child(7) {
+  background: var(--red);
+  opacity: 0.5;
+}
