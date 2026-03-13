@@ -1,17 +1,85 @@
-# React + Vite
+```
+                ┌─────────────────────────────────┐
+                │                                 │
+                │      ███████████████████████     │
+                │      █                   █      │
+                │      █    ┌───┐          █      │
+                │      █    │   │    ○     █      │
+                │      █    └───┘          █      │
+                │      █         ▲         █      │
+                │      █        ╱ ╲        █      │
+                │      █       ╱   ╲       █      │
+                │      █      ╱─────╲      █      │
+                │      █                   █      │
+                │      ███████████████████████     │
+                │                                 │
+                │   B A U H A U S   1 9 1 9       │
+                │   form · function · unity        │
+                │                                 │
+                └─────────────────────────────────┘
+```
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Bauhaus Architecture
 
-Currently, two official plugins are available:
+A bold, poster-style landing page celebrating the Bauhaus design movement.
+Built with React + Vite. No UI libraries. Just CSS, typography, and intent.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+### What it looks like
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Mint-green canvas. Massive black condensed type that fills the viewport edge to edge.
+Grayscale architecture photography that reveals color on hover.
+A dark image strip. Full-bleed background sections. Nothing decorative — the text is the design.
 
-## Expanding the ESLint configuration
+Inspired by the Bauhaus principle: **form follows function.**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# landing-bauhaus
+---
+
+### Sections
+
+| Section | Layout |
+|---|---|
+| **Hero** | Viewport-filling poster typography with byline |
+| **Gallery** | Dark horizontal strip of grayscale architecture photos |
+| **Intro** | Two-column — text left, large image right |
+| **Principles** | Three-column numbered cards |
+| **Buildings** | Photo cards with asymmetric heights |
+| **Legacy** | Full-bleed background image with dark overlay |
+
+---
+
+### Stack
+
+- **React 19** + **Vite 8**
+- **Anton** (display) + **Inter** (body) via Google Fonts
+- Plain CSS with custom properties
+- Unsplash images, grayscale-filtered via CSS
+- IntersectionObserver scroll reveals
+- Zero dependencies beyond React
+
+---
+
+### Run it
+
+```bash
+npm install
+npm run dev
+```
+
+Opens at `http://localhost:5173`
+
+---
+
+### Design reference
+
+The visual direction draws from bold graphic-poster aesthetics —
+oversized condensed type on flat color, high contrast, monochrome photography,
+and layouts where whitespace is structural, not decorative.
+
+The Bauhaus taught us that a building should reveal how it is made.
+This page tries to do the same.
+
+---
+
+*Bauhaus · Dessau · 1919–1933*
