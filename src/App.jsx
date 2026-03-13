@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import Hero from './components/Hero'
 import Gallery from './components/Gallery'
 import Intro from './components/Intro'
@@ -17,6 +18,7 @@ export default function App() {
       <Buildings />
       <Legacy />
       <Footer />
+      <Analytics />
     </div>
   )
 }
